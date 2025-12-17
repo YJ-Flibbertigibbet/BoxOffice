@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>模型评估报告</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .header { background-color: #4CAF50; color: white; padding: 20px; text-align: center; }
+        .section { margin: 30px 0; padding: 20px; border: 1px solid #ddd; border-radius: 5px; }
+        .metric { display: flex; justify-content: space-between; margin: 10px 0; }
+        .metric-name { font-weight: bold; }
+        .metric-value { color: #4CAF50; }
+        .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+        .image { width: 100%; height: auto; border: 1px solid #ddd; padding: 10px; }
+        h2 { color: #333; border-bottom: 2px solid #4CAF50; padding-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>CatBoost模型评估报告</h1>
+            <p>生成时间: 2025-12-17 13:05:42</p>
+        </div>
+        
+        <div class="section">
+            <h2>基础指标</h2>
+            <div class="grid">
+                <div class="metric"><span class="metric-name">R²分数:</span><span class="metric-value">0.9804</span></div>
+                <div class="metric"><span class="metric-name">RMSE:</span><span class="metric-value">9605.0213</span></div>
+                <div class="metric"><span class="metric-name">MAE:</span><span class="metric-value">4136.3184</span></div>
+                <div class="metric"><span class="metric-name">MAPE:</span><span class="metric-value">47.55%</span></div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>可视化图表</h2>
+            <div class="grid">
+                <div>
+                    <h3>预测 vs 真实值</h3>
+                    <img class="image" src="catboost_with_res_fc_results.png" alt="预测结果">
+                </div>
+                <div>
+                    <h3>SHAP特征重要性</h3>
+                    <img class="image" src="shap_summary_plot.png" alt="SHAP分析">
+                </div>
+                <div>
+                    <h3>误差分布分析</h3>
+                    <img class="image" src="error_distribution_analysis.png" alt="误差分布">
+                </div>
+                <div>
+                    <h3>残差正态性检验</h3>
+                    <img class="image" src="qq_plot_residuals.png" alt="Q-Q图">
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>性能总结</h2>
+            <p>模型在测试集上表现 良好</p>
+            <p>预测精度: 较低</p>
+            <p>残差正态性: 不符合正态分布</p>
+        </div>
+    </div>
+</body>
+</html>

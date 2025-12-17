@@ -10,13 +10,14 @@ photosFolder="box_office/data/photos"
 commentFile="box_office/data/filtered_comments.xlsx"
 
 #数据文件
-boxDataFile="box_office/data/raw_ceshi.xlsx"
+boxDataFile="box_office/data/train_ceshi.xlsx"
+textBoxDataFile="box_office/data/test_ceshi.xlsx"
 #对应图片索引列名
 picDataId="id"
 
 #训练
-batchSize=32
-epochs=30
+batchSize=64
+epochs=100
 lr=0.001
 transform = transforms.Compose([
         transforms.Resize((224, 224)),

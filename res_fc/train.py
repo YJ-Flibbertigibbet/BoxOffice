@@ -6,7 +6,7 @@ import torch.nn as nn
 from torch import optim
 import config
 
-def resTrain(split=False):
+def resTrain(split=True):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     Dataset=data.dataset()

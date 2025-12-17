@@ -1,0 +1,29 @@
+
+模型性能总结报告
+============================================================
+
+一、模型基本信息
+   - 模型类型: CatBoost回归 (集成res_fc特征)
+   - 测试样本数: 147
+   - 特征总数: 29
+
+二、主要性能指标
+   - R²分数: 0.9804 ✓
+   - RMSE: 9605.0213
+   - MAE: 4136.3184
+   - MAPE: 47.55%
+
+三、统计检验结果
+   - 残差正态性检验: 未通过
+   - 皮尔逊相关性: 0.9905
+   - 解释方差: 0.9804
+
+四、模型建议
+   ✓ 模型解释能力很强，可以用于生产环境
+   ✗ 预测精度有待提高
+
+五、文件输出
+   - 详细评估报告: box_office/catboost/catboost_info_with_resfc/detailed_evaluation_report.json
+   - HTML报告: box_office/catboost/catboost_info_with_resfc/evaluation_report.html
+   - 所有图表文件: box_office/catboost/catboost_info_with_resfc/*.png
+============================================================

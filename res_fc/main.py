@@ -2,8 +2,8 @@ from pandas.core.arrays.sparse.array import splib
 import train
 
 #====================================
-def main():
-    train.resTrain()
+def main(split=True):
+    train.resTrain(split=split)
 
 
 #====================================
