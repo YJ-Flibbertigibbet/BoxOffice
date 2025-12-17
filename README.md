@@ -1,4 +1,4 @@
-# 电影票房预测项目 - CatBoost模型
+# 电影票房预测项目 - CatBoost&ResNet18
 
 具体代码数据详见box_office.zip
 
